@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List of Pets</title>
+	<link rel="stylesheet" type="text/css" href="/styles/style.css">
+</head>
+<body>
+<h1>This is the Pets Index Page</h1>
+
+<ul>
+	<h4>List of Pets</h4>
+	<% pet.forEach((item, i) => { %>
+		<ul>
+		<a href="/pet/<%= item.id %>" title=""><%= item.type %></a>
+		<a href="/pet/<%= item.id %>/edit" title="">Edit This Pet</a>
+		<form action="/pet/<%= item.id %>?_method=DELETE" method="POST">
+        	<button type="submit">delete</button>
+     	</form>
+		</ul>
+	<% }) %>
+</ul>
+<script src='/javascripts/indexejs.js'></script>
+</body>
+</html>

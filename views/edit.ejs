@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit <%=pet.type%></title>
+  <link rel="stylesheet" type="text/css" href="/styles/style.css">
+</head>
+<body>
+  <h1>Edit PetPage</h1>
+
+  <form action="/pet/<%= pet.id %>/edit?_method=PUT" method="POST">
+    Type:         <input type="text" name="type" value="<%=pet.type%>">
+    Color:        <input type="text" name="color" value="<%=pet.color%>">
+    Size:         <input type="text" name="size" value="<%=pet.size%>">
+    Is it a good pet?:  <input type="checkbox" name="goodPet">
+    
+              <input type="submit" value="Submit">
+  </form>
+<script src='/javascripts/edit.js'></script>
+</body>
+</html>
